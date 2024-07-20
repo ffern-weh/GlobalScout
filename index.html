@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Scout</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleIndex.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="logo" style="font-size: 46px; font-weight: bold; text-align: center; width: 100%; cursor: pointer;" onclick="window.location.href='index.html'">Global Scout</div>
-            <div class="ml-auto">
-                <button class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal" style="border: none; background: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: black;">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-        
-    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style="font-size: 46px; font-weight: bold;"><i>Global Scout</i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <!-- Add more links here if needed -->
+                <li class="nav-item">
+                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal" style="border: none; background: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: black;">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     
     <section id="home" class="hero">
         <h1>Greetings! Dreaming of your next getaway?</h1>
@@ -44,78 +60,90 @@
                 <img src="images/vietnam.avif" alt="Vietnam">
                 <h3>Vietnam</h3>
             </div>
+            <div class="destination" onclick="window.location.href='paris.html'">
+                <img src="images/paris.jpg" alt="Paris">
+                <h3>Paris</h3>
+            </div>
+            <div class="destination" onclick="window.location.href='bali.html'">
+                <img src="images/bali1.jpg" alt="Bali">
+                <h3>Bali</h3>
+            </div>
         </div>
     </section>
         
-    <section id="benefits">
-        <h2>Why Choose Us?</h2>
-        <div class="benefits-container">
-            <div class="benefit">
-                <h3>AI Integration</h3>
-                <p>Get personalized itinerary suggestions powered by AI.</p>
+       <section id="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <div class="benefits-container">
+                <div class="benefit">
+                    <div class="icon">
+                        <i class="fas fa-brain"></i> 🤖
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Get personalized itinerary suggestions powered by AI to make your travel planning effortless and tailored to your preferences.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i> ⏰
+                    </div>
+                    <h3>Time Saving</h3>
+                    <p>Save time and effort with our expertly curated travel plans, ensuring you make the most of your trip without the hassle of planning.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">
+                        <i class="fas fa-gem"></i> 💎
+                    </div>
+                    <h3>Hidden Gems</h3>
+                    <p>Discover hidden gems and must-see places recommended just for you, making your travel experience unique and unforgettable.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">
+                        <i class="fas fa-headset"></i> 🎧
+                    </div>
+                    <h3>24/7 Customer Support</h3>
+                    <p>Enjoy peace of mind with our 24/7 customer support, ready to assist you with any inquiries or issues during your travels.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">
+                        <i class="fas fa-handshake"></i> 🤝
+                    </div>
+                    <h3>Trusted Partners</h3>
+                    <p>Travel confidently with our trusted partners, ensuring quality service and memorable experiences at every destination.</p>
+                </div>
+                <div class="benefit">
+                    <div class="icon">
+                        <i class="fas fa-dollar-sign"></i> 💰
+                    </div>
+                    <h3>Affordable Prices</h3>
+                    <p>Experience great value for your money with our competitive pricing, offering exceptional travel experiences without breaking the bank.</p>
+                </div>
             </div>
-            <div class="benefit">
-                <h3>Time Saving</h3>
-                <p>Save time and effort with our expertly curated travel plans.</p>
-            </div>
-            <div class="benefit">
-                <h3>Hidden Gems</h3>
-                <p>Discover hidden gems and must-see places recommended just for you.</p>
-            </div>
-        </div>
+        </section>
+ 
+
+    <section id="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest travel news, tips, and deals straight to your inbox.</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
     </section>
-    
-    <section id="footer" class="footer mt-auto py-3 bg-bright text-black">
+
+    <section id="footer" class="footer mt-auto py-3">
         <div class="container">
-            <div class="row">
-                <!-- About Us -->
-                <div class="col-lg-4 col-md-6">
-                    <h5>About Us</h5>
-                    <ul>
-                        <li>Embracing the Wabi-Sabi Journey At our core, we believe travel isn't just about reaching a destination;</li>
-                        <li>It's about the beauty found in the in-between.</li>
-                        <li> Inspired by the Japanese philosophy of wabi-sabi, we embrace the impermanence and imperfections inherent in every journey.</li>
-                    </ul>
-                </div>
-                <!-- Terms of Service -->
-                <div class="col-lg-4 col-md-6">
-                    <h5>Terms of Service</h5>
-                    <ul>
-                        <li>By booking with Global Scout, you agree to our Terms of Service.</li>
-                        <li>Please review these terms carefully to understand your rights and responsibilities.</li>
-                        <li>Enjoy a hassle-free and safe travel experience with our trusted services.</li>
-                    </ul>
-                </div>
-                <!-- Contact Us -->
-                <div class="col-lg-4 col-md-12">
-                    <h5>Contact Us</h5>
-                    <ul>
-                        <li>Have questions or need assistance? We're here to help!</li>
-                        <li>Email us at <a href="mailto:contact@globalscout.com">contact@globalscout.com</a>.</li>
-                        <li>Or get in touch via:
-                            <ul>
-                                <li>Phone: +1 (555) 987-6543</li>
-                                <li>Telegram ID: @global_scout</li>
-                                <li>Instagram ID: @global_scout</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="mt-4">
-            <div class="row">
+            <div class="row justify-content-center">
+                <hr class="mt-4 w-100">
                 <div class="col-12 text-center">
                     <span class="text-muted">GLOBAL SCOUT &copy; 2024. All rights reserved.</span>
-                    <div class="social-icons mt-3">
-                        <a href="https://www.facebook.com" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
+        <!-- Live Chat Support -->
+        <div class="live-chat">
+            <button class="btn btn-primary rounded-circle" onclick="startChat()">Live Chat</button>
+        </div>
     </section>
+
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -144,11 +172,16 @@
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="script.js"></script>
+    <script>
+        function startChat() {
+            // Implement your chat functionality here
+            alert("Starting live chat support...");
+        }
+    </script>
 </body>
 </html>
