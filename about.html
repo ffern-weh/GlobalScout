@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Scout</title>
+    <link rel="stylesheet" href="styleAbout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html" style="font-size: 46px; font-weight: bold;"><i>GLOBAL SCOUT</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">FEEDBACK</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal" style="border: none; background: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: black;">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about-header">
+        <img src="images/about.jpg" alt="About Us" class="img-fluid">
+        <h1>ABOUT US</h1>
+    </div>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row text-center mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="box" style="font-family: 'Roboto', sans-serif;">
+                        <p>
+                            🌍 WELCOME TO GLOBAL SCOUT, YOUR PREMIER DESTINATION FOR IMMERSIVE TRAVEL EXPERIENCES. AT GLOBAL SCOUT, WE BELIEVE THAT TRAVEL IS MORE THAN JUST VISITING NEW PLACES; IT'S ABOUT EMBRACING THE JOURNEY AND DISCOVERING THE BEAUTY IN THE DETAILS.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="box" style="font-family: 'Roboto', sans-serif;">
+                        <p>
+                            🎌 INSPIRED BY THE JAPANESE PHILOSOPHY OF WABI-SABI, WE CELEBRATE THE BEAUTY IN IMPERFECTION AND THE UNIQUENESS OF EACH MOMENT. OUR MISSION IS TO PROVIDE YOU WITH CURATED TRAVEL EXPERIENCES THAT ALLOW YOU TO EXPLORE THE WORLD IN A MEANINGFUL AND AUTHENTIC WAY.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="box" style="font-family: 'Roboto', sans-serif;">
+                        <p>
+                            🏞️ WHETHER YOU ARE AN ADVENTURER SEEKING THRILLING ESCAPADES OR A CULTURE ENTHUSIAST EAGER TO LEARN ABOUT NEW TRADITIONS, GLOBAL SCOUT OFFERS A DIVERSE RANGE OF TRAVEL PACKAGES TO SUIT YOUR INTERESTS. OUR DEDICATED TEAM OF TRAVEL EXPERTS WORKS TIRELESSLY TO ENSURE THAT EVERY TRIP IS METICULOUSLY PLANNED AND TAILORED TO YOUR PREFERENCES.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="box" style="font-family: 'Roboto', sans-serif;">
+                        <p>
+                            ✈️ JOIN US ON A JOURNEY TO DISCOVER HIDDEN GEMS, FORGE UNFORGETTABLE MEMORIES, AND CONNECT WITH THE WORLD LIKE NEVER BEFORE. AT GLOBAL SCOUT, WE ARE COMMITTED TO MAKING YOUR TRAVEL DREAMS A REALITY, ONE EXTRAORDINARY JOURNEY AT A TIME.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h5>OUR VALUES</h5>
+                    <ul class="list-unstyled" style="font-family: 'Roboto', sans-serif;">
+                        <li><strong>🌟 AUTHENTICITY:</strong> PROVIDING GENUINE AND IMMERSIVE TRAVEL EXPERIENCES.</li>
+                        <li><strong>♻️ SUSTAINABILITY:</strong> PROMOTING ECO-FRIENDLY AND RESPONSIBLE TOURISM.</li>
+                        <li><strong>🤝 COMMUNITY:</strong> FOSTERING CONNECTIONS WITH LOCAL CULTURES AND COMMUNITIES.</li>
+                        <li><strong>🏅 EXCELLENCE:</strong> ENSURING TOP-NOTCH SERVICE AND UNPARALLELED QUALITY.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <hr class="mt-4 w-100">
+                <div class="col-12 text-center">
+                    <span class="text-muted">GLOBAL SCOUT &copy; 2024. ALL RIGHTS RESERVED.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Live Chat Support -->
+        <div class="live-chat">
+            <button class="btn btn-primary rounded-circle" onclick="startChat()">LIVE CHAT</button>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">SIGN IN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">USERNAME</label>
+                            <input type="text" class="form-control" id="username" placeholder="ENTER USERNAME">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" class="form-control" id="password" placeholder="PASSWORD">
+                        </div>
+                        <button type="submit" class="btn btn-primary">SIGN IN</button>
+                    </form>
+                    <p class="mt-3">DON'T HAVE AN ACCOUNT? <a href="#">SIGN UP HERE</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function startChat() {
+            // Implement your chat functionality here
+            alert("Starting live chat support...");
+        }
+    </script>
+</body>
+</html>
