@@ -1,0 +1,176 @@
+body {
+    background-blend-mode: multiply;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slide-background 20s linear infinite, fadeIn 2s ease-out;
+    text-transform: uppercase; /* Make all text uppercase */
+    animation: slideIn 1s ease-out; /* Add slideIn animation to body */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 1%;
+}
+
+.about-header img {
+    width: 100%;
+    height: auto;
+    filter: blur(1px); /* Apply blur to the image */
+}
+
+.about-header h1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-weight: 600;
+    color: white;
+}
+
+section#about .box {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+section#about .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+    animation: fadeIn 2s ease-out;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+.footer h5 {
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: #007bff;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer hr {
+    border-top: 1px solid #ddd;
+}
+
+.footer .social-icons a {
+    color: #007bff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Live Chat Button */
+.live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.live-chat .btn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    animation: buttonHover 2s infinite;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+#footer {
+    position: relative;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px 0; /* Padding for better spacing */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+#footer .text-muted {
+    font-size: 16px; /* Increase font size */
+    font-weight: 500; /* Slightly bolder text */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+#footer hr {
+    border-top: 2px solid #dee2e6; /* Make the horizontal line more prominent */
+}
+
+.live-chat {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.live-chat button {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 50%; /* Make the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+@keyframes slide-background {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonHover {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
