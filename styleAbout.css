@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     background-blend-mode: multiply;
     font-family: 'Poppins', sans-serif;
@@ -19,6 +20,7 @@ body {
     }
 }
 
+/* Header Styles */
 .about-header {
     position: relative;
     text-align: center;
@@ -42,6 +44,7 @@ body {
     color: white;
 }
 
+/* Section Styles */
 section#about .box {
     background: #ffffff;
     border-radius: 15px;
@@ -56,6 +59,7 @@ section#about .box:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer Styles */
 .footer {
     padding: 2rem 1rem;
     background-color: #f8f9fa;
@@ -95,23 +99,7 @@ section#about .box:hover {
     font-size: 1.5rem;
 }
 
-/* Live Chat Button */
-.live-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    animation: fadeIn 2s ease-out;
-}
-
-.live-chat .btn {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-    animation: buttonHover 2s infinite;
-    text-transform: uppercase; /* Make text uppercase */
-}
-
+/* Footer Specific Styles */
 #footer {
     position: relative;
     background-color: #f8f9fa; /* Light grey background */
@@ -129,25 +117,7 @@ section#about .box:hover {
     border-top: 2px solid #dee2e6; /* Make the horizontal line more prominent */
 }
 
-.live-chat {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.live-chat button {
-    width: 60px;
-    height: 60px;
-    font-size: 12px;
-    padding: 10px;
-    border-radius: 50%; /* Make the button circular */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase; /* Make text uppercase */
-}
-
+/* Animation Keyframes */
 @keyframes slide-background {
     0% {
         background-position: 0 0;
@@ -173,4 +143,21 @@ section#about .box:hover {
     50% {
         transform: scale(1.1);
     }
+}
+
+/* Live Chat Button */
+.live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.live-chat .btn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+    animation: buttonHover 2s infinite;
+    text-transform: uppercase; /* Make text uppercase */
 }
