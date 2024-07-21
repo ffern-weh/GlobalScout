@@ -180,32 +180,6 @@ section h2 {
     color: #666;
 }
 
-/* Testimonials Section */
-.testimonial-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    background-color: #fff;
-    animation: fadeIn 2s ease-out;
-}
-
-.testimonial {
-    text-align: center;
-    max-width: 600px;
-    background-color: #f0f0f0;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    animation: slideIn 1.5s ease-out;
-}
-
-.testimonial p {
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
 /* Newsletter Section */
 #newsletter {
     text-align: center;
@@ -286,39 +260,7 @@ section h2 {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     animation: buttonHover 2s infinite;
-}
-
-#footer {
-    position: relative;
-    background-color: #f8f9fa; /* Light grey background */
-    padding: 20px 0; /* Padding for better spacing */
-}
-
-#footer .text-muted {
-    font-size: 16px; /* Increase font size */
-    font-weight: 500; /* Slightly bolder text */
-}
-
-#footer hr {
-    border-top: 2px solid #dee2e6; /* Make the horizontal line more prominent */
-}
-
-.live-chat {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.live-chat button {
-    width: 60px;
-    height: 60px;
-    font-size: 12px;
-    padding: 10px;
-    border-radius: 50%; /* Make the button circular */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    text-transform: uppercase; /* Make text uppercase */
 }
