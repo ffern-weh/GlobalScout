@@ -8,155 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .navbar-brand {
-            font-size: 46px;
-            font-weight: bold;
-        }
-        .contact-section {
-            flex: 1;
-            padding: 60px 0;
-        }
-        .contact-form {
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-info {
-            margin-bottom: 40px;
-        }
-        .contact-info h4 {
-            margin-bottom: 20px;
-        }
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-        .map-container {
-            margin-top: 40px;
-        }
-        .form-control:focus {
-            box-shadow: none;
-            border-color: #007bff;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .contact-form h4 {
-            margin-bottom: 30px;
-            font-size: 24px;
-        }
-        .contact-form .form-group label {
-            font-weight: bold;
-        }
-        .contact-form .form-group input, 
-        .contact-form .form-group textarea {
-            padding: 15px;
-            border-radius: 6px;
-        }
-        .contact-form button {
-            padding: 12px 30px;
-            font-size: 16px;
-            border-radius: 6px;
-        }
-        .form-icon {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #999;
-        }
-        .form-group {
-            position: relative;
-        }
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="subject"],
-        .form-group textarea {
-            padding-left: 35px;
-        }
-        .footer {
-            background: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-        }
-        .live-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-        .live-chat-button {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            line-height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        .live-chat-button:hover {
-            background-color: #0056b3;
-        }
-        .live-chat-window {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            z-index: 1000;
-        }
-        .live-chat-window header {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-        }
-        .live-chat-window .chat-box {
-            height: 300px;
-            padding: 10px;
-            overflow-y: auto;
-        }
-        .live-chat-window .chat-input {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-        .live-chat-window .chat-input input {
-            flex: 1;
-            border: none;
-            padding: 10px;
-            font-size: 14px;
-        }
-        .live-chat-window .chat-input button {
-            border: none;
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .live-chat-window .chat-input button:hover {
-            background: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="styleContact.css">
 </head>
 <body>
 
@@ -175,9 +27,6 @@
                 <a class="nav-link" href="about.html"><i class="bi bi-person"></i> About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="feedback.html"><i class="bi bi-chat-dots"></i> Feedback</a>
             </li>
             <li class="nav-item">
@@ -189,95 +38,88 @@
 
 <!-- Contact Section -->
 <div class="contact-section">
-    <div class="container">
-        <div class="row">
-            <!-- Contact Info -->
-            <div class="col-md-4 contact-info">
-                <h4>Contact Information</h4>
-                <p><i class="bi bi-geo-alt-fill"></i> 1234 Street Name, City, Country</p>
-                <p><i class="bi bi-telephone-fill"></i> +123 456 7890</p>
-                <p><i class="bi bi-envelope-fill"></i> contact@globalscout.com</p>
-                <p><i class="bi bi-clock-fill"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
-            </div>
-            <!-- Contact Form -->
-            <div class="col-md-8">
-                <div class="contact-form">
-                    <h4>Send Us a Message</h4>
-                    <form action="#" method="post">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Name</label>
-                                <i class="bi bi-person form-icon"></i>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="email">Email</label>
-                                <i class="bi bi-envelope form-icon"></i>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <i class="bi bi-bookmark form-icon"></i>
-                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <i class="bi bi-pencil form-icon"></i>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+    <div class="contact-info">
+        <h4>Contact Information</h4>
+        <p><i class="bi bi-geo-alt-fill"></i> 1234 Street Name, City, Country</p>
+        <p><i class="bi bi-telephone-fill"></i> +123 456 7890</p>
+        <p><i class="bi bi-envelope-fill"></i> contact@globalscout.com</p>
+        <p><i class="bi bi-clock-fill"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+    </div>
+    <div class="contact-form-container">
+        <div class="contact-form">
+            <h4>Send Us a Message</h4>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <i class="bi bi-person form-icon"></i>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <i class="bi bi-envelope form-icon"></i>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <i class="bi bi-pencil form-icon"></i>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <i class="bi bi-chat-left-dots form-icon"></i>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
         </div>
-        <!-- Map -->
+    </div>
+</div>
+
+<div class="container">
         <div class="row map-container">
             <div class="col-12">
                 <h4>Our Location</h4>
-                <div class="embed-responsive embed-responsive-21by9">
+                <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.908183417191!2d-122.39927908468112!3d37.79216577975699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858083a875b38d%3A0x9d35cb5191b8912e!2s1%20Market%20St%2C%20San%20Francisco%2C%20CA%2094105!5e0!3m2!1sen!2sus!4v1604344827950!5m2!1sen!2sus" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Footer Section -->
-<section id="footer" class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <hr class="mt-4 w-100">
-            <div class="col-12 text-center">
-                <span class="text-muted">GLOBAL SCOUT &copy; 2024. All rights reserved.</span>
+<section id="footer" class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <hr class="mt-4 w-100">
+                <div class="col-12 text-center">
+                    <span class="text-muted">GLOBAL SCOUT &copy; 2024. All rights reserved.</span>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Live Chat -->
-    <div class="live-chat">
-        <button class="live-chat-button" onclick="toggleChatWindow()">💬</button>
-        <div class="live-chat-window" id="chatWindow">
-            <header>Live Chat</header>
-            <div class="chat-box" id="chatBox">
-                <!-- Chat messages will be appended here -->
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chatMessage" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
+        <!-- Live Chat -->
+        <div class="live-chat">
+            <button class="live-chat-button" onclick="toggleChatWindow()">💬</button>
+            <div class="live-chat-window" id="chatWindow">
+                <header>Live Chat</header>
+                <div class="chat-box" id="chatBox">
+                    <!-- Chat messages will be appended here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatMessage" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Live Chat Functionality -->
 <script>
-    function toggleChatWindow() {
-        const chatWindow = document.getElementById('chatWindow');
+    function toggleChat() {
+        const chatWindow = document.querySelector('.live-chat-window');
         chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
     }
 
@@ -293,6 +135,8 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
     }
+
+    document.querySelector('.live-chat-button').addEventListener('click', toggleChat);
 </script>
 
 </body>
