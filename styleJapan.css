@@ -1,18 +1,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
-    text-transform: uppercase; /* Convert all text to uppercase */
 }
 
-.navbar-brand {
-    font-size: 36px;
-    font-weight: 600;
-    text-transform: uppercase; /* Convert text to uppercase */
-}
-
-.nav-link {
-    font-size: 18px;
-    text-transform: uppercase; /* Convert text to uppercase */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase; /* Make all headings uppercase */
 }
 
 .slideshow-container {
@@ -58,7 +50,6 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1.2rem;
-    text-transform: uppercase; /* Convert caption text to uppercase */
 }
 
 /* Navigation Controls */
@@ -75,7 +66,6 @@ body {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    text-transform: uppercase; /* Convert control text to uppercase */
 }
 
 .next {
@@ -125,12 +115,10 @@ body {
     padding: 2rem 1rem;
     background-color: #f8f9fa;
     animation: fadeIn 2s ease-out;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .footer h5 {
     margin-bottom: 1rem;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .footer ul {
@@ -144,7 +132,6 @@ body {
 
 .footer a {
     color: #007bff;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .footer a:hover {
@@ -161,57 +148,12 @@ body {
     font-size: 1.5rem;
 }
 
-/* Footer Specific Styles */
-#footer {
-    position: relative;
-    background-color: #f8f9fa; /* Light grey background */
-    padding: 20px 0; /* Padding for better spacing */
-    text-transform: uppercase; /* Convert text to uppercase */
-}
-
-#footer .text-muted {
-    font-size: 16px; /* Increase font size */
-    font-weight: 500; /* Slightly bolder text */
-    text-transform: uppercase; /* Convert text to uppercase */
-}
-
-#footer hr {
-    border-top: 2px solid #dee2e6; /* Make the horizontal line more prominent */
-}
-
-/* Animation Keyframes */
-@keyframes slide-background {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes buttonHover {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
 /* Live Chat */
 .live-chat {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    perspective: 1000px; /* Add perspective for 3D effect */
 }
 
 .live-chat-button {
@@ -227,11 +169,13 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    text-transform: uppercase; /* Convert button text to uppercase */
+    transform: translateZ(10px); /* Add 3D translation */
+    transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .live-chat-button:hover {
     background-color: #0056b3;
+    transform: scale(1.1) translateZ(10px); /* Enhance 3D effect on hover */
 }
 
 .live-chat-window {
@@ -241,10 +185,11 @@ body {
     right: 20px;
     width: 300px;
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
     border-radius: 8px;
     overflow: hidden;
     z-index: 1000;
+    transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .live-chat-window header {
@@ -253,13 +198,14 @@ body {
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    text-transform: uppercase; /* Convert header text to uppercase */
+    transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .live-chat-window .chat-box {
     height: 300px;
     padding: 10px;
     overflow-y: auto;
+    transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .live-chat-window .chat-input {
@@ -272,6 +218,7 @@ body {
     border: none;
     padding: 10px;
     font-size: 14px;
+    transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .live-chat-window .chat-input button {
@@ -280,23 +227,23 @@ body {
     color: white;
     padding: 10px;
     cursor: pointer;
+    transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .live-chat-window .chat-input button:hover {
     background: #0056b3;
+    transform: translateZ(5px); /* Add depth effect */
 }
 
 h2 {
     text-align: center;
     margin-top: 20px;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 p {
     text-align: center;
     margin: 10px 20px;
     color: #555;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .places-container-wrapper {
@@ -337,14 +284,12 @@ p {
 .place-title {
     font-size: 1.2em;
     margin: 10px;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .place-description {
     font-size: 0.9em;
     color: #666;
     margin: 0 10px 10px;
-    text-transform: uppercase; /* Convert text to uppercase */
 }
 
 .arrow {
