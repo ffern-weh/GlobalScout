@@ -14,16 +14,6 @@
             background-color: #f8f9fa;
             perspective: 1000px; /* Add perspective to the body for 3D effect */
         }
-
-        .navbar-brand {
-            font-size: 36px;
-            font-weight: 600;
-        }
-
-        .nav-link {
-            font-size: 18px;
-        }
-
         #feedback h2 {
             color: #007bff;
             font-weight: 600;
@@ -65,14 +55,14 @@
 
         .rating-box {
             display: inline-block;
-            padding: 15px; /* Increased padding for larger clickable area */
+            padding: 2px; /* Increased padding for larger clickable area */
             border: 2px solid #ced4da; /* Slightly thicker border */
             border-radius: 50%; /* Circle shape for a polished look */
             margin: 5px;
             text-align: center;
             cursor: pointer;
-            width: 90px; /* Increase size */
-            height: 90px; /* Increase size */
+            width: 50px; /* Increase size */
+            height: 50px; /* Increase size */
             transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow */
         }
@@ -108,6 +98,95 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
+        /* Footer Styles */
+        .footer {
+            padding: 2rem 1rem;
+            background-color: #f8f9fa;
+            animation: fadeIn 2s ease-out;
+            text-transform: uppercase; /* Make text uppercase */
+            text-align: center; /* Center the text */
+        }
+
+        .footer h5 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem; /* Slightly larger font size */
+            font-weight: 600; /* Make text bolder */
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-transform: uppercase; /* Make text uppercase */
+            font-weight: 500; /* Slightly bolder text */
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer hr {
+            border-top: 2px solid #ddd; /* Make the horizontal line more prominent */
+            margin: 1rem 0; /* Add some margin */
+        }
+
+        .footer .social-icons a {
+            color: #007bff;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        #footer {
+            position: relative;
+            background-color: #f8f9fa; /* Light grey background */
+            padding: 20px 0; /* Padding for better spacing */
+            text-transform: uppercase; /* Make text uppercase */
+        }
+
+        #footer .text-muted {
+            font-size: 16px; /* Increase font size */
+            font-weight: 500; /* Slightly bolder text */
+            text-transform: uppercase; /* Make text uppercase */
+        }
+
+        #footer hr {
+            border-top: 2px solid #dee2e6; /* Make the horizontal line more prominent */
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonHover {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Live Chat */
+        .live-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            perspective: 1000px; /* Add perspective for 3D effect */
+        }
+
         .live-chat-button {
             width: 60px;
             height: 60px;
@@ -119,14 +198,15 @@
             background-color: #007bff;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow */
-            transition: box-shadow 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transform: translateZ(10px); /* Add 3D translation */
+            transform-style: preserve-3d; /* Enable 3D transformations */
         }
 
         .live-chat-button:hover {
             background-color: #0056b3;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-            transform: translateY(-3px); /* Lift effect */
+            transform: scale(1.1) translateZ(10px); /* Enhance 3D effect on hover */
         }
 
         .live-chat-window {
@@ -136,36 +216,55 @@
             right: 20px;
             width: 300px;
             background: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow */
-            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+            border-radius: 8px;
             overflow: hidden;
             z-index: 1000;
-            transform: rotateX(2deg); /* Slight rotation */
-            transition: transform 0.3s, box-shadow 0.3s;
+            transform-style: preserve-3d; /* Enable 3D transformations */
         }
 
-        .live-chat-window:hover {
-            transform: rotateX(0); /* Reset rotation on hover */
+        .live-chat-window header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            transform-style: preserve-3d; /* Enable 3D transformations */
         }
 
-        .footer {
-            background-color: #f8f9fa;
-            color: #6c757d;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Add shadow */
-            transform: rotateX(-2deg); /* Slight rotation for 3D effect */
+        .live-chat-window .chat-box {
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto;
+            transform-style: preserve-3d; /* Enable 3D transformations */
         }
 
-        .footer span {
-            font-size: 16px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+        .live-chat-window .chat-input {
+            display: flex;
+            border-top: 1px solid #ddd;
         }
 
-        .btn-secondary {
-            font-size: 16px;
-            font-weight: 600;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+        .live-chat-window .chat-input input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            transform-style: preserve-3d; /* Enable 3D transformations */
         }
 
+        .live-chat-window .chat-input button {
+            border: none;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            transform-style: preserve-3d; /* Enable 3D transformations */
+        }
+
+        .live-chat-window .chat-input button:hover {
+            background: #0056b3;
+            transform: translateZ(5px); /* Add depth effect */
+        }
     </style>
 </head>
 <body>
