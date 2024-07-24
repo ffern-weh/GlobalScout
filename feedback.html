@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Global Scout</title>
+    <link rel="stylesheet" href="styleIndex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            perspective: 1000px; /* Add perspective to the body for 3D effect */
+        }
+
+        .navbar-brand {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            font-size: 18px;
+        }
+
+        #feedback h2 {
+            color: #007bff;
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            transform: rotateX(5deg) rotateY(5deg); /* Slight rotation for 3D effect */
+        }
+
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 18px;
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        .rating-box {
+            display: inline-block;
+            padding: 15px; /* Increased padding for larger clickable area */
+            border: 2px solid #ced4da; /* Slightly thicker border */
+            border-radius: 50%; /* Circle shape for a polished look */
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            width: 90px; /* Increase size */
+            height: 90px; /* Increase size */
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        .rating-box input[type="radio"] {
+            display: none; /* Hide radio buttons */
+        }
+
+        .rating-box label {
+            font-size: 32px; /* Larger font size for emojis */
+            display: block;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .rating-box:hover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+            transform: translateY(-5px); /* Slight lift for 3D effect */
+        }
+
+        .rating-box:hover label {
+            color: #007bff; /* Change color on hover */
+        }
+
+        .collage-img {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .collage-img:hover {
+            transform: scale(1.05) rotateZ(1deg); /* Scale up and slight rotation */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .live-chat-button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow */
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .live-chat-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+            transform: translateY(-3px); /* Lift effect */
+        }
+
+        .live-chat-window {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow */
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1000;
+            transform: rotateX(2deg); /* Slight rotation */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .live-chat-window:hover {
+            transform: rotateX(0); /* Reset rotation on hover */
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            color: #6c757d;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transform: rotateX(-2deg); /* Slight rotation for 3D effect */
+        }
+
+        .footer span {
+            font-size: 16px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        .btn-secondary {
+            font-size: 16px;
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html" style="font-size: 46px; font-weight: bold;"><i>Global Scout</i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="bi bi-person"></i> About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal"><i class="bi bi-person-circle"></i> Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Feedback Form Section -->
+    <section id="feedback" class="container mt-5">
+        <h2 class="text-center">We Value Your Feedback</h2>
+        <p class="text-center">Please share your thoughts and suggestions about your experience with Global Scout.</p>
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card p-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="feedback-type">Feedback Type</label>
+                            <select class="form-control" id="feedback-type">
+                                <option>General Feedback</option>
+                                <option>Website Issues</option>
+                                <option>Service Experience</option>
+                                <option>Suggestions</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rate Your Overall Experience</label>
+                            <div id="rating" class="d-flex justify-content-between">
+                                <div class="rating-box">
+                                    <input type="radio" name="rating" id="rate-1">
+                                    <label for="rate-1" class="bi bi-emoji-frown"></label>
+                                </div>
+                                <div class="rating-box">
+                                    <input type="radio" name="rating" id="rate-2">
+                                    <label for="rate-2" class="bi bi-emoji-neutral"></label>
+                                </div>
+                                <div class="rating-box">
+                                    <input type="radio" name="rating" id="rate-3">
+                                    <label for="rate-3" class="bi bi-emoji-smile"></label>
+                                </div>
+                                <div class="rating-box">
+                                    <input type="radio" name="rating" id="rate-4">
+                                    <label for="rate-4" class="bi bi-emoji-heart-eyes"></label>
+                                </div>
+                                <div class="rating-box">
+                                    <input type="radio" name="rating" id="rate-5">
+                                    <label for="rate-5" class="bi bi-emoji-laughing"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="allfeedback.html" class="btn btn-secondary">View All Feedback</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="images/collage.jpg" alt="Feedback Collage" class="img-fluid collage-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer" class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <hr class="mt-4 w-100">
+                <div class="col-12 text-center">
+                    <span class="text-muted">GLOBAL SCOUT &copy; 2024. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+        <!-- Live Chat -->
+        <div class="live-chat">
+            <button class="live-chat-button" onclick="toggleChatWindow()">💬</button>
+            <div class="live-chat-window" id="chatWindow">
+                <header>Live Chat</header>
+                <div class="chat-box" id="chatBox">
+                    <!-- Chat messages will be appended here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatMessage" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <p class="mt-3">Don't have an account? <a href="#">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function toggleChatWindow() {
+            const chatWindow = document.getElementById('chatWindow');
+            chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function sendMessage() {
+            const messageInput = document.getElementById('chatMessage');
+            const messageText = messageInput.value.trim();
+            if (messageText) {
+                const chatBox = document.getElementById('chatBox');
+                const newMessage = document.createElement('div');
+                newMessage.textContent = messageText;
+                chatBox.appendChild(newMessage);
+                messageInput.value = '';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
