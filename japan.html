@@ -10,7 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="index.html" style="font-size: 46px; font-weight: bold;"><i>GLOBAL SCOUT</i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,19 +38,19 @@
         <p class="text-center">Explore the Land of the Rising Sun.</p>
         <div class="slideshow-container">
             <div class="slide active">
-                <img src="https://i.natgeofe.com/k/e9781357-7abe-4d48-96d2-1151d9fd265a/italy-coliseum.jpg?wp=1&w=1084.125&h=609" alt="Japan Image 1">
+                <img src="images/japan.jpg" alt="Japan">
             </div>
             <div class="slide">
-                <img src="https://cdn.kimkim.com/files/a/images/55d7ea8718fda7b5b1c4c3a68f239c128e5b29a6/original-4521771c354baf2a58b2658514a129e5.jpg" alt="Japan Image 2">
+                <img src="images/gifu.jpg" alt="Gifu">
             </div>
             <div class="slide">
-                <img src="https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg" alt="Japan Image 3">
+                <img src="images/fukuoka.jpg" alt="Fukuoka">
             </div>
             <div class="slide">
-                <img src="https://media.cntraveler.com/photos/64823876d19bbdf5ed1d10d1/2:1/w_2560%2Cc_limit/Italy%2520Destination%2520landing%2520page_GettyImages-1258117204.jpg" alt="Japan Image 4">
+                <img src="images/kanagawa.jpg" alt="Kanagawa">
             </div>
             <div class="slide">
-                <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180625134525/Cinque-Terre-Italy.jpg" alt="Japan Image 5">
+                <img src="images/fuji.jpg" alt="Fuji">
             </div>
         </div>
         
@@ -59,6 +59,45 @@
             <p>Discover the best itineraries to make the most of your visit to Japan.</p>
             <p><a href="https://www.japan.travel/" target="_blank">Click here to visit the official tourism page of Japan.</a></p>
             
+            
+            <h2>Places to Visit</h2>
+    <div class="places-container-wrapper">
+        <button id="slide-left-container" class="arrow left">&#10094;</button>
+        <div class="places-container" id="placesContainer">
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/tokyo.jpg');"></div>
+                <div class="place-title">Tokyo</div>
+                <div class="place-description">A dazzling metropolis where futuristic innovation meets ancient tradition.</div>
+            </div>
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/kyoto.jpg');"></div>
+                <div class="place-title">Kyoto</div>
+                <div class="place-description">A timeless city where serene temples and vibrant geishas paint a picture of Japan's rich cultural heritage.</div>
+            </div>
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/osaka.jpg');"></div>
+                <div class="place-title">Osaka</div>
+                <div class="place-description">A lively blend of culinary delights and vibrant nightlife.</div>
+            </div>
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/nara.jpg');"></div>
+                <div class="place-title">Nara</div>
+                <div class="place-description">Ancient temples and roaming deer in a tranquil, historic setting.</div>
+            </div>
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/okinawa.jpg');"></div>
+                <div class="place-title">Okinawa</div>
+                <div class="place-description">Known for its tropical climate, beautiful beaches, and coral reefs.</div>
+            </div>
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/hiroshima.jpg');"></div>
+                <div class="place-title">Hiroshima</div>
+                <div class="place-description">Known for its Peace Memorial Park, which commemorates the 1945 atomic bombing.</div>
+            </div>
+        </div>
+        <button id="slide-right-container" class="arrow right">&#10095;</button>
+    </div>
+
             <h2>Food</h2>
             <div class="places-container-wrapper">
                 <button id="slide-left-container-food" class="arrow left">&#10094;</button>
@@ -136,44 +175,6 @@
     <button id="slide-right-container-hotels" class="arrow right">&#10095;</button>
 </div>
 
-            
-            <h2>Places to Visit</h2>
-            <div class="places-container-wrapper">
-                <button id="slide-left-container" class="arrow left">&#10094;</button>
-                <div class="places-container" id="placesContainer">
-                    <div class="place-card">
-                        <div class="place-image" style="background-image: url('https://example.com/image1.jpg');"></div>
-                        <div class="place-title">Tokyo</div>
-                        <div class="place-description">The bustling capital city known for its skyscrapers and vibrant culture.</div>
-                    </div>
-                    <div class="place-card">
-                        <div class="place-image" style="background-image: url('https://example.com/image2.jpg');"></div>
-                        <div class="place-title">Kyoto</div>
-                        <div class="place-description">Famous for its classical Buddhist temples, as well as gardens, imperial palaces, Shinto shrines, and traditional wooden houses.</div>
-                    </div>
-                    <div class="place-card">
-                        <div class="place-image" style="background-image: url('https://example.com/image3.jpg');"></div>
-                        <div class="place-title">Hokkaido</div>
-                        <div class="place-description">Known for its volcanoes, natural hot springs (onsen), and ski areas.</div>
-                    </div>
-                    <div class="place-card">
-                        <div class="place-image" style="background-image: url('https://example.com/image4.jpg');"></div>
-                        <div class="place-title">Nara</div>
-                        <div class="place-description">Famous for its park, which is home to hundreds of freely roaming deer, and its significant temples.</div>
-                    </div>
-                    <div class="place-card">
-                        <div class="place-image" style="background-image: url('https://example.com/image5.jpg');"></div>
-                        <div class="place-title">Okinawa</div>
-                        <div class="place-description">Known for its tropical climate, beautiful beaches, and coral reefs.</div>
-                    </div>
-                    <div class="place-card">
-                        <div class="place-image" style="background-image: url('https://example.com/image6.jpg');"></div>
-                        <div class="place-title">Hiroshima</div>
-                        <div class="place-description">Known for its Peace Memorial Park, which commemorates the 1945 atomic bombing.</div>
-                    </div>
-                </div>
-                <button id="slide-right-container" class="arrow right">&#10095;</button>
-            </div>
             
             <h2>Underrated Places</h2>
             <div class="places-container-wrapper">
