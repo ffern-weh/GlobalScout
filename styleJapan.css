@@ -159,7 +159,7 @@ body {
     font-size: 17px;
     display: none;
     position: absolute;
-    border-radius: 15px;
+    border-radius: 10px;
     top: 0;
     left: 0;
     width: 100%;
@@ -175,12 +175,12 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .place-card:hover .place-image {
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* Footer Styling */
