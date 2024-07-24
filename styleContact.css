@@ -1,19 +1,12 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     text-transform: uppercase;
     overflow-x: hidden;
     perspective: 1000px; /* Add perspective for 3D effect */
-}
-
-/* Navbar Styles */
-.navbar-brand {
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
 }
 
 /* Contact Section Styles */
