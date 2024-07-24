@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 1rem;
     background-color: #f8f9fa;
     animation: fadeIn 2s ease-out;
+    text-transform: uppercase; /* Make text uppercase */
 }
 
 .footer h5 {
@@ -132,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a {
     color: #007bff;
+    text-transform: uppercase; /* Make text uppercase */
 }
 
 .footer a:hover {
@@ -146,6 +148,52 @@ h1, h2, h3, h4, h5, h6 {
     color: #007bff;
     margin: 0 0.5rem;
     font-size: 1.5rem;
+}
+
+/* Footer Specific Styles */
+#footer {
+    position: relative;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px 0; /* Padding for better spacing */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+#footer .text-muted {
+    font-size: 16px; /* Increase font size */
+    font-weight: 500; /* Slightly bolder text */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+#footer hr {
+    border-top: 2px solid #dee2e6; /* Make the horizontal line more prominent */
+}
+
+/* Animation Keyframes */
+@keyframes slide-background {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonHover {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* Live Chat */
