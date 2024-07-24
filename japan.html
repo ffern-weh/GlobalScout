@@ -12,23 +12,23 @@
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html" style="font-size: 46px; font-weight: bold;"><i>Global Scout</i></a>
+        <a class="navbar-brand" href="index.html" style="font-size: 46px; font-weight: bold;"><i>GLOBAL SCOUT</i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a>
+                    <a class="nav-link" href="index.html"><i class="bi bi-house"></i> HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="feedback.html"><i class="bi bi-chat-dots"></i> feedback</a>
+                    <a class="nav-link" href="about.html"><i class="bi bi-person"></i> ABOUT US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal"><i class="bi bi-person-circle"></i> Sign Up</a>
+                    <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html"><i class="bi bi-chat-dots"></i> FEEDBACK</a>
                 </li>
             </ul>
         </div>
@@ -214,16 +214,17 @@
                 <button id="slide-right-container-hotels" class="arrow right">&#10095;</button>
             </div>           
         </div>
-        
+
     <section id="footer" class="footer mt-auto py-3">
         <div class="container">
             <div class="row justify-content-center">
                 <hr class="mt-4 w-100">
                 <div class="col-12 text-center">
-                    <span class="text-muted">GLOBAL SCOUT &copy; 2024. ALL RIGHTS RESERVED.</span>
+                    <span class="text-muted">GLOBAL SCOUT &copy; 2024. All rights reserved.</span>
                 </div>
             </div>
         </div>
+        <!-- Live Chat -->
         <div class="live-chat">
             <button class="live-chat-button" onclick="toggleChatWindow()">💬</button>
             <div class="live-chat-window" id="chatWindow">
@@ -237,6 +238,7 @@
                 </div>
             </div>
         </div>
+    </section>
     </section>
 
     <!-- JavaScript dependencies -->
@@ -257,7 +259,6 @@
 
         setInterval(showNextSlide, 3000);
 
-
         function toggleChatWindow() {
             const chatWindow = document.getElementById('chatWindow');
             chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
@@ -276,53 +277,58 @@
             }
         }
 
-        const container = document.getElementById('placesContainer');
-        const leftArrow = document.getElementById('slide-left-container');
-        const rightArrow = document.getElementById('slide-right-container');
-        const containerWidth = container.clientWidth;
-        const cardWidth = container.querySelector('.place-card').clientWidth + 20; // Include margin
+        function createSlider(containerId, leftArrowId, rightArrowId) {
+            const container = document.getElementById(containerId);
+            const leftArrow = document.getElementById(leftArrowId);
+            const rightArrow = document.getElementById(rightArrowId);
+            const cardWidth = container.querySelector('.place-card').clientWidth + 20; // Include margin
 
-        function updateArrows() {
-            const scrollLeft = container.scrollLeft;
-            const scrollWidth = container.scrollWidth;
-            const clientWidth = container.clientWidth;
+            function updateArrows() {
+                const scrollLeft = container.scrollLeft;
+                const scrollWidth = container.scrollWidth;
+                const clientWidth = container.clientWidth;
 
-            rightArrow.style.display = (scrollLeft + clientWidth < scrollWidth) ? 'block' : 'none';
-            leftArrow.style.display = (scrollLeft > 0) ? 'block' : 'none';
-        }
+                rightArrow.style.display = (scrollLeft + clientWidth < scrollWidth) ? 'block' : 'none';
+                leftArrow.style.display = (scrollLeft > 0) ? 'block' : 'none';
+            }
 
-        function scrollLeft() {
-            container.scrollBy({
-              top: 0,
-              left: -cardWidth,
-              behavior: 'smooth'
+            function scrollLeftFunc() {
+                container.scrollBy({
+                    top: 0,
+                    left: -cardWidth,
+                    behavior: 'smooth'
+                });
+                updateArrows();
+            }
+
+            function scrollRightFunc() {
+                container.scrollBy({
+                    top: 0,
+                    left: cardWidth,
+                    behavior: 'smooth'
+                });
+                updateArrows();
+            }
+
+            leftArrow.addEventListener('click', scrollLeftFunc);
+            rightArrow.addEventListener('click', scrollRightFunc);
+
+            // Initial check to set arrow visibility
+            updateArrows();
+
+            // Update arrows on window resize
+            window.addEventListener('resize', function() {
+                updateArrows();
             });
-            updateArrows();
+
+            // Update arrow visibility on scroll
+            container.addEventListener('scroll', updateArrows);
         }
 
-        function scrollRight() {
-            container.scrollBy({
-                top: 0,
-                left: cardWidth,
-                behavior: 'smooth'
-            });
-            updateArrows();
-        }
-
-        leftArrow.addEventListener('click', scrollLeft);
-        rightArrow.addEventListener('click', scrollRight);
-
-        // Initial check to set arrow visibility
-        updateArrows();
-
-        // Update arrows on window resize
-        window.addEventListener('resize', function() {
-            updateArrows();
-        });
-
-        // Update arrow visibility on scroll
-        container.addEventListener('scroll', updateArrows);
-
+        createSlider('placesContainer', 'slide-left-container', 'slide-right-container');
+        createSlider('placesContainerUnderrated', 'slide-left-container-underrated', 'slide-right-container-underrated');
+        createSlider('placesContainerHotels', 'slide-left-container-hotels', 'slide-right-container-hotels');
+        createSlider('placesContainerFood', 'slide-left-container-food', 'slide-right-container-food');
     </script>
 </body>
 </html>
