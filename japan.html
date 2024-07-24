@@ -96,6 +96,46 @@
                 </div>
                 <button id="slide-right-container-food" class="arrow right">&#10095;</button>
             </div>
+
+            <h2>Hotels</h2>
+<div class="places-container-wrapper">
+    <button id="slide-left-container-hotels" class="arrow left">&#10094;</button>
+    <div class="places-container" id="placesContainerHotels">
+        <div class="place-card">
+            <div class="place-image" style="background-image: url('https://example.com/hotel1.jpg');"></div>
+            <div class="place-title">Hotel Tokyo</div>
+            <div class="place-description">A luxury hotel in the heart of Tokyo with stunning city views.</div>
+        </div>
+        <div class="place-card">
+            <div class="place-image" style="background-image: url('https://example.com/hotel2.jpg');"></div>
+            <div class="place-title">Kyoto Inn</div>
+            <div class="place-description">A traditional Japanese inn offering a peaceful retreat.</div>
+        </div>
+        <div class="place-card">
+            <div class="place-image" style="background-image: url('https://example.com/hotel3.jpg');"></div>
+            <div class="place-title">Hokkaido Resort</div>
+            <div class="place-description">A resort with beautiful natural surroundings and hot springs.</div>
+        </div>
+        <div class="place-card">
+            <div class="place-image" style="background-image: url('https://example.com/hotel1.jpg');"></div>
+            <div class="place-title">Hotel Tokyo</div>
+            <div class="place-description">A luxury hotel in the heart of Tokyo with stunning city views.</div>
+        </div>
+        <div class="place-card">
+            <div class="place-image" style="background-image: url('https://example.com/hotel2.jpg');"></div>
+            <div class="place-title">Kyoto Inn</div>
+            <div class="place-description">A traditional Japanese inn offering a peaceful retreat.</div>
+        </div>
+        <div class="place-card">
+            <div class="place-image" style="background-image: url('https://example.com/hotel3.jpg');"></div>
+            <div class="place-title">Hokkaido Resort</div>
+            <div class="place-description">A resort with beautiful natural surroundings and hot springs.</div>
+        </div>
+        <!-- Add more hotel cards as needed -->
+    </div>
+    <button id="slide-right-container-hotels" class="arrow right">&#10095;</button>
+</div>
+
             
             <h2>Places to Visit</h2>
             <div class="places-container-wrapper">
@@ -171,35 +211,32 @@
     </section>
 
     <footer class="footer">
-            <div class="footer-content">
-                <div class="social-media">
-                    <h4>Follow Us</h4>
-                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
-                </div>
-                <div class="about-footer">
-                    <h4>About Us</h4>
-                    <p>We are dedicated to helping you discover the best travel destinations around the world. Our mission is to provide you with the most accurate and up-to-date information to make your travels unforgettable.</p>
-                </div>
-                <div class="contact-footer">
-                    <h4>Contact Us</h4>
-                    <p>Email: <a href="mailto:info@globalscout.com">info@globalscout.com</a></p>
-                    <p>Phone: <a href="tel:+1234567890">+123-456-7890</a></p>
-                    <p>Address: 123 Travel Lane, Adventure City, AC 45678, USA</p>
-                </div>
+        <div class="footer-content">
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-pinterest"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
             </div>
-            <div class="footer-copyright">
-                <p>GLOBAL SCOUT &copy; 2024. All rights reserved.</p>
+            <div class="about-footer">
+                <h4>About Us</h4>
+                <p>We are dedicated to helping you discover the best travel destinations around the world. Our mission is to provide you with the most accurate and up-to-date information to make your travels unforgettable.</p>
             </div>
-        </footer>
-
-
-
+            <div class="contact-footer">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@globalscout.com">info@globalscout.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+123-456-7890</a></p>
+                <p>Address: 123 Travel Lane, Adventure City, AC 45678, USA</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>GLOBAL SCOUT &copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         const slideContainer = document.querySelector('.slideshow-container');
@@ -227,6 +264,15 @@
         document.querySelector('#slide-left-container').addEventListener('click', () => {
             document.querySelector('#placesContainer').scrollBy({ left: -300, behavior: 'smooth' });
         });
+
+        document.querySelector('#slide-right-container-hotels').addEventListener('click', () => {
+           document.querySelector('#placesContainerHotels').scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        document.querySelector('#slide-left-container-hotels').addEventListener('click', () => {
+           document.querySelector('#placesContainerHotels').scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
 
         document.querySelector('#slide-right-container-underrated').addEventListener('click', () => {
             document.querySelector('#placesContainerUnderrated').scrollBy({ left: 300, behavior: 'smooth' });
