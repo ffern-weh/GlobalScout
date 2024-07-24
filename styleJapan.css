@@ -1,4 +1,4 @@
-/* test.css */
+/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Navbar Styling */
 .navbar-brand {
     font-size: 46px;
     font-weight: bold;
@@ -16,27 +17,41 @@ body {
     font-weight: 600;
 }
 
+/* Destination Details Styling */
 .destination-details {
     padding: 40px 0;
 }
 
 .destination-details h1, .destination-details h2 {
-    font-weight: 600;
+    font-weight: 750;
 }
 
 .destination-details p {
-    font-size: 16px;
+    font-size: 20px;
     margin: 20px 0;
+    font-weight: 400;
 }
 
+/* Slideshow Styling */
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
+    width: 1200px; /* Set a fixed width closer to a square ratio */
+    height: 600px; /* Set a fixed height closer to a square ratio */
+    overflow: hidden; /* Hide any overflow */
+    background-color: #f0f0f0; /* Optional: add a background color */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 .slide {
     display: none;
+    width: 100%; /* Make slides take the full width of the container */
+    height: 100%; /* Make slides take the full height of the container */
+    position: absolute; /* Position slides absolutely within the container */
+    top: 0;
+    left: 0;
 }
 
 .slide.active {
@@ -45,18 +60,23 @@ body {
 
 .slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the slide area */
 }
 
 .details-content {
     margin-top: 40px;
 }
 
+/* Places Container Styling */
 .places-container-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .places-container {
@@ -64,22 +84,69 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     width: 100%;
+    padding: 0 20px; /* Added padding to give some space between the arrows and cards */
 }
 
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.5rem; /* Reduced size */
+    color: #333;
+    padding: 5px; /* Adjusted padding for better click area */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 50%; /* Makes the arrows rounder */
+    background-color: rgba(255, 255, 255, 0.7); /* Translucent background */
+    border: none; /* Remove any border */
+    outline: none; /* Remove focus outline */
+}
+
+.arrow:hover {
+    background-color: white; /* Slightly darker translucent background on hover */
+}
+
+.arrow:focus,
+.arrow:active {
+    border: none; /* Ensure no border on focus or active state */
+    outline: none; /* Remove focus outline */
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+/* Place Card Styling */
 .place-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 10px;
+    position: relative;
     background: #f8f8f8;
     border-radius: 10px;
     margin: 10px;
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 220px; /* Increased min-width */
+    max-width: 220px; /* Increased max-width */
     overflow: hidden;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for a more professional look */
 }
 
 .place-image {
+    width: 100%;
+    height: 200px;
     background-size: cover;
     background-position: center;
-    height: 150px;
+    transition: background 0.3s ease-in-out;
 }
 
 .place-title {
@@ -89,15 +156,34 @@ body {
 }
 
 .place-description {
-    padding: 0 10px 10px;
+    font-size: 17px;
+    display: none;
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: display 0.3s ease-in-out;
 }
 
-.arrow {
-    cursor: pointer;
-    font-size: 2rem;
-    color: #333;
+.place-card:hover .place-description {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
 }
 
+.place-card:hover .place-image {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+/* Footer Styling */
 .footer {
     background-color: black; /* Slightly lighter dark background for better contrast */
     color: #f5f5f5; /* Light grey text color for better readability */
