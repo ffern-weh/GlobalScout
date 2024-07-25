@@ -12,12 +12,10 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
-            perspective: 1000px; /* Add perspective to the body for 3D effect */
         }
         #feedback h2 {
             color: #007bff;
             font-weight: 600;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         }
 
         .card {
@@ -32,12 +30,10 @@
             border-radius: 5px;
             font-size: 16px;
             padding: 10px;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
         }
 
         .form-control:focus {
             border-color: #007bff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
         }
 
         .btn-primary {
@@ -45,7 +41,6 @@
             border-color: #007bff;
             font-size: 18px;
             font-weight: 600;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
         }
 
         .btn-primary:hover {
@@ -64,7 +59,6 @@
             width: 50px; /* Increase size */
             height: 50px; /* Increase size */
             transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow */
         }
 
         .rating-box input[type="radio"] {
@@ -84,7 +78,7 @@
         }
 
         .rating-box:hover label {
-            color: #007bff; /* Change color on hover */
+            color: black; /* Change color on hover */
         }
 
         .collage-img {
@@ -178,93 +172,36 @@
                 transform: scale(1.1);
             }
         }
-
-        /* Live Chat */
-        .live-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            perspective: 1000px; /* Add perspective for 3D effect */
+        
+        /* Sign-Up Modal Styles */
+        #signupModal .modal-content {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+            transform: translateZ(20px); /* 3D Translation */
         }
 
-        .live-chat-button {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            line-height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            transform: translateZ(10px); /* Add 3D translation */
-            transform-style: preserve-3d; /* Enable 3D transformations */
+        #signupModal .modal-header {
+            border-bottom: none;
         }
 
-        .live-chat-button:hover {
-            background-color: #0056b3;
-            transform: scale(1.1) translateZ(10px); /* Enhance 3D effect on hover */
+        #signupModal .modal-body {
+            padding: 20px;
         }
 
-        .live-chat-window {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            background: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
-            border-radius: 8px;
-            overflow: hidden;
-            z-index: 1000;
-            transform-style: preserve-3d; /* Enable 3D transformations */
-        }
-
-        .live-chat-window header {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            text-align: center;
+        #signupModal .form-group label {
             font-weight: bold;
-            transform-style: preserve-3d; /* Enable 3D transformations */
+            text-transform: none; /* Remove uppercase transform for labels */
         }
 
-        .live-chat-window .chat-box {
-            height: 300px;
-            padding: 10px;
-            overflow-y: auto;
-            transform-style: preserve-3d; /* Enable 3D transformations */
+        #signupModal .form-control {
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for 3D effect */
         }
 
-        .live-chat-window .chat-input {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-
-        .live-chat-window .chat-input input {
-            flex: 1;
-            border: none;
-            padding: 10px;
-            font-size: 14px;
-            transform-style: preserve-3d; /* Enable 3D transformations */
-        }
-
-        .live-chat-window .chat-input button {
-            border: none;
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            transform-style: preserve-3d; /* Enable 3D transformations */
-        }
-
-        .live-chat-window .chat-input button:hover {
-            background: #0056b3;
-            transform: translateZ(5px); /* Add depth effect */
-        }
     </style>
 </head>
 <body>
@@ -360,20 +297,6 @@
                 </div>
             </div>
         </div>
-        <!-- Live Chat -->
-        <div class="live-chat">
-            <button class="live-chat-button" onclick="toggleChatWindow()">💬</button>
-            <div class="live-chat-window" id="chatWindow">
-                <header>Live Chat</header>
-                <div class="chat-box" id="chatBox">
-                    <!-- Chat messages will be appended here -->
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="chatMessage" placeholder="Type your message...">
-                    <button onclick="sendMessage()">Send</button>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Login Modal -->
@@ -418,15 +341,15 @@
                     <form>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                            <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Sign Up</button>
                     </form>
@@ -441,24 +364,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="script.js"></script>
-    <script>
-        function toggleChatWindow() {
-            const chatWindow = document.getElementById('chatWindow');
-            chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function sendMessage() {
-            const messageInput = document.getElementById('chatMessage');
-            const messageText = messageInput.value.trim();
-            if (messageText) {
-                const chatBox = document.getElementById('chatBox');
-                const newMessage = document.createElement('div');
-                newMessage.textContent = messageText;
-                chatBox.appendChild(newMessage);
-                messageInput.value = '';
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-        }
-    </script>
 </body>
 </html>
