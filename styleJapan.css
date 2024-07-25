@@ -6,31 +6,35 @@ body {
     box-sizing: border-box;
 }
 
-/* Navbar Styling */
-.navbar-brand {
-    font-size: 46px;
-    font-weight: bold;
-}
-
-.nav-link {
-    font-size: 18px;
-    font-weight: 600;
-}
-
 /* Destination Details Styling */
 .destination-details {
     padding: 40px 0;
 }
 
 .destination-details h1, .destination-details h2 {
-    font-weight: 750;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 3D Effect */
+    color: #333; /* Darker color for more contrast */
 }
 
 .destination-details p {
     font-size: 20px;
     margin: 20px 0;
-    font-weight: 400;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Slight 3D Effect */
+    color: #555; /* Slightly lighter color for better readability */
 }
+
+/* Additional Styling for Smart and Attractive Look */
+h1, p {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+h1:hover, p:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    color: blue; /* Change color on hover */
+}
+
 
 /* Slideshow Styling */
 .slideshow-container {
