@@ -335,6 +335,7 @@ section h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .live-chat-button {
@@ -350,6 +351,7 @@ section h2 {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
+    transition: background-color 0.3s ease;
 }
 
 .live-chat-button:hover {
@@ -381,6 +383,8 @@ section h2 {
     height: 300px;
     padding: 10px;
     overflow-y: auto;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
 }
 
 .live-chat-window .chat-input {
@@ -393,6 +397,7 @@ section h2 {
     border: none;
     padding: 10px;
     font-size: 14px;
+    outline: none;
 }
 
 .live-chat-window .chat-input button {
@@ -401,8 +406,60 @@ section h2 {
     color: white;
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .live-chat-window .chat-input button:hover {
     background: #0056b3;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.ai-message {
+    background: #f1f1f1;
+    color: #333;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+
+/* Sign-Up Modal Styles */
+#signupModal .modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+    transform: translateZ(20px); /* 3D Translation */
+}
+
+#signupModal .modal-header {
+    border-bottom: none;
+}
+
+#signupModal .modal-body {
+    padding: 20px;
+}
+
+#signupModal .form-group label {
+    font-weight: bold;
+    text-transform: none; /* Remove uppercase transform for labels */
+}
+
+#signupModal .form-control {
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for 3D effect */
 }
