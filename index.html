@@ -166,15 +166,15 @@
                     <form>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                            <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Sign Up</button>
                     </form>
@@ -202,9 +202,17 @@
                 const chatBox = document.getElementById('chatBox');
                 const newMessage = document.createElement('div');
                 newMessage.textContent = messageText;
+                newMessage.classList.add('chat-message', 'user-message');
                 chatBox.appendChild(newMessage);
                 messageInput.value = '';
                 chatBox.scrollTop = chatBox.scrollHeight;
+                setTimeout(() => {
+                    const aiMessage = document.createElement('div');
+                    aiMessage.textContent = "This is a response from the AI.";
+                    aiMessage.classList.add('chat-message', 'ai-message');
+                    chatBox.appendChild(aiMessage);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }, 1000);
             }
         }
 
