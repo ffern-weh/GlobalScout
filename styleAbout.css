@@ -142,89 +142,31 @@ section#about .box:hover {
     }
 }
 
-/* Live Chat */
-.live-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    perspective: 1000px; /* Add perspective for 3D effect */
+/* Sign-Up Modal Styles */
+#signupModal .modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for 3D effect */
+    transform: translateZ(20px); /* 3D Translation */
 }
 
-.live-chat-button {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    line-height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transform: translateZ(10px); /* Add 3D translation */
-    transform-style: preserve-3d; /* Enable 3D transformations */
+#signupModal .modal-header {
+    border-bottom: none;
 }
 
-.live-chat-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1) translateZ(10px); /* Enhance 3D effect on hover */
+#signupModal .modal-body {
+    padding: 20px;
 }
 
-.live-chat-window {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 1000;
-    transform-style: preserve-3d; /* Enable 3D transformations */
-}
-
-.live-chat-window header {
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    text-align: center;
+#signupModal .form-group label {
     font-weight: bold;
-    transform-style: preserve-3d; /* Enable 3D transformations */
+    text-transform: none; /* Remove uppercase transform for labels */
 }
 
-.live-chat-window .chat-box {
-    height: 300px;
-    padding: 10px;
-    overflow-y: auto;
-    transform-style: preserve-3d; /* Enable 3D transformations */
-}
-
-.live-chat-window .chat-input {
-    display: flex;
-    border-top: 1px solid #ddd;
-}
-
-.live-chat-window .chat-input input {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    transform-style: preserve-3d; /* Enable 3D transformations */
-}
-
-.live-chat-window .chat-input button {
-    border: none;
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    transform-style: preserve-3d; /* Enable 3D transformations */
-}
-
-.live-chat-window .chat-input button:hover {
-    background: #0056b3;
-    transform: translateZ(5px); /* Add depth effect */
+#signupModal .form-control {
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for 3D effect */
 }
