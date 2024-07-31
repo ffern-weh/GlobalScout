@@ -187,7 +187,7 @@ h1:hover, p:hover {
 
 /* Itinerary Section */
 .itinerary {
-    padding: 20px 15%;
+    padding: 20px 10%; /* Adjust padding for better fit on smaller screens */
     text-align: center;
     font-size: 18px;
     color: #2c3e50;
@@ -200,14 +200,14 @@ h1:hover, p:hover {
 
 .itinerary h2 {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 32px; /* Adjust font size for better fit on smaller screens */
     color: #1a1a1a;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .accordion {
-    margin: 60px auto;
-    width: 100%;
+    margin: 40px auto;
+    width: 90%; /* Adjust width for better fit on smaller screens */
     max-width: 800px;
 }
 
@@ -220,8 +220,8 @@ h1:hover, p:hover {
 .accordion li label {
     display: flex;
     align-items: center;
-    padding: 20px;
-    font-size: 20px;
+    padding: 15px; /* Adjust padding for better fit on smaller screens */
+    font-size: 18px; /* Adjust font size for better fit on smaller screens */
     font-weight: 500;
     background: #0892d0;
     color: #ecf0f1;
@@ -285,6 +285,75 @@ input[type="radio"] {
     color: inherit;
     filter: none; /* Ensure no blur or unwanted effects are applied */
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .itinerary {
+        padding: 20px 5%;
+    }
+
+    .itinerary h2 {
+        font-size: 28px;
+    }
+
+    .accordion {
+        width: 95%;
+    }
+
+    .accordion li label {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .accordion .content {
+        padding: 0 15px;
+    }
+
+    .accordion input[type="radio"]:checked + label + .content {
+        padding: 15px 15px;
+    }
+
+    .accordion input[type="radio"]:checked + label::after {
+        right: 15px;
+    }
+
+    label::after {
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .itinerary {
+        padding: 15px 5%;
+    }
+
+    .itinerary h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .accordion .content {
+        padding: 0 10px;
+    }
+
+    .accordion input[type="radio"]:checked + label + .content {
+        padding: 10px 10px;
+    }
+
+    .accordion input[type="radio"]:checked + label::after {
+        right: 10px;
+    }
+
+    label::after {
+        right: 10px;
+    }
+}
+
 
 
 /* Footer Styling */
