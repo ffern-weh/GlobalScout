@@ -32,9 +32,7 @@ h1, p {
 
 h1:hover, p:hover {
     transform: translateY(-5px); /* Slight lift on hover */
-    color: blue; /* Change color on hover */
 }
-
 
 /* Slideshow Styling */
 .slideshow-container {
@@ -170,7 +168,7 @@ h1:hover, p:hover {
     height: 82%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 30px;
+    padding: 25px;
     box-sizing: border-box;
     transition: display 0.3s ease-in-out;
 }
@@ -187,6 +185,108 @@ h1:hover, p:hover {
     border-radius: 10px;
 }
 
+/* Itinerary Section */
+.itinerary {
+    padding: 20px 15%;
+    text-align: center;
+    font-size: 18px;
+    color: #2c3e50;
+    background: #f4f7f9; /* Light elegant background color */
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    filter: none; /* Ensure no blur effect is applied */
+}
+
+.itinerary h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    background: #0892d0;
+    color: #ecf0f1;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.accordion li label:hover {
+    background: #52b3de;
+    transform: scale(1.02); /* Slight scale-up on hover */
+}
+
+label::after {
+    content: '+';
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #ecf0f1;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+    border-radius: 0 0 4px 4px;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 20px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.itinerary .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.itinerary small {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.itinerary:hover,
+.itinerary h2:hover,
+.itinerary .email-signup:hover,
+.accordion .content:hover {
+    color: inherit;
+    filter: none; /* Ensure no blur or unwanted effects are applied */
+}
+
+
 /* Footer Styling */
 .footer {
     background-color: black; /* Slightly lighter dark background for better contrast */
@@ -194,6 +294,7 @@ h1:hover, p:hover {
     padding: 40px 20px;
     text-align: center;
     border-top: 1px solid #444; /* Subtle top border for separation */
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-content {
