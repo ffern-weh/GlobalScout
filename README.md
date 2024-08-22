@@ -2,9 +2,9 @@
 Welcome to the Global Scout Travel Website repositories! This project includes two versions of the travel website: a full-stack application and a frontend-only representation.
 
 # Repositories
-Full-Stack Version: AdyaSharma02/GlobalScout
+Full-Stack Version: https://github.com/AdyaSharma02/GlobalScout
 
-Frontend-Only Version: ffern-weh/GlobalScout
+Frontend-Only Version: https://github.com/ffern-weh/GlobalScout
 
 # Frontend-Only Version
 This repository is a frontend-only representation of the Global Scout Travel Website. It showcases the design and layout of the platform without a working backend, database, or chatbot functionality.
@@ -28,11 +28,9 @@ Clone the repository:
 git clone https://github.com/ffern-weh/GlobalScout.git
 
 Navigate to the project directory:
-
 cd GlobalScout
 
 Open the index.html file in your browser to view the static site.
-
 
 Thank you for exploring the Global Scout Travel Website! We hope these repositories serve as a solid foundation for your travel-related web applications. Feel free to customize and expand the features to suit your needs.
 
